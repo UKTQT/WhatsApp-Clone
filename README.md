@@ -1,6 +1,4 @@
-# whatsclone
+# WhatsApp Clone App
 
-A new Flutter project.
-
-## Getting Started
+First Flutter project, WhatsApp Clone
 
