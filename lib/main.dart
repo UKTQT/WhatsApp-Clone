@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 
-import 'widgets/body_chats.dart';
+import 'pages/body_chats.dart';
+import 'pages/body_status.dart';
+import 'pages/body_call.dart';
+import 'pages/body_settings.dart';
+import 'ui/helper/text_helper.dart';
+import 'ui/helper/color_helper.dart';
 
 void main() {
   runApp(MyHomePage());
@@ -11,7 +16,7 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'WhatsApp Clone',
+      title: TextHelper.headerTitle,
       theme: ThemeData.dark(),
       home: HomePage(),
     );
@@ -37,7 +42,9 @@ class _HomePageState extends State<HomePage> {
             width: 50.0,
             height: 50.0,
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Scaffold.of(context).openEndDrawer();
+              },
               child: Icon(Icons.camera),
               style: ElevatedButton.styleFrom(
                 elevation: 0,
@@ -67,14 +74,52 @@ class _HomePageState extends State<HomePage> {
                 Container(
                     width: 50.0,
                     height: 50.0,
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      child: Icon(Icons.grain),
-                      style: ElevatedButton.styleFrom(
-                        elevation: 0,
-                        primary: Colors.transparent,
-                      ),
-                    )),
+                    child: PopupMenuButton(
+                        color: ColorHelper.headerPopupMenuBg,
+                        child: Icon(Icons.grain),
+                        itemBuilder: (context) => [
+                              PopupMenuItem(
+                                onTap: () {},
+                                child: Text("Yeni Grup"),
+                                value: 1,
+                              ),
+                              PopupMenuItem(
+                                onTap: () {},
+                                child: Text("Yeni Toplu Mesaj"),
+                                value: 2,
+                              ),
+                              PopupMenuItem(
+                                onTap: () {},
+                                child: Text("Bağlı Cihazlar"),
+                                value: 3,
+                              ),
+                              PopupMenuItem(
+                                onTap: () {},
+                                child: Text("Yıldızlı Mesajlar"),
+                                value: 4,
+                              ),
+                              PopupMenuItem(
+                                child: Text("Ayarlar"),
+                                value: 5,
+                              ),
+                            ],
+                        onSelected: (choice) {
+                          switch (choice) {
+                            case 1:
+                              break;
+                            case 2:
+                              break;
+                            case 3:
+                              break;
+                            case 4:
+                              break;
+                            case 5:
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => BodySettings()));
+                          }
+                        })),
               ],
             ),
           ],
@@ -82,22 +127,30 @@ class _HomePageState extends State<HomePage> {
             preferredSize: const Size.fromHeight(50.0),
             child: TabBar(tabs: [
               Tab(
-                text: 'Sohbetler',
+                text: TextHelper.tabBarView1,
               ),
               Tab(
-                text: 'Durum',
+                text: TextHelper.tabBarView2,
               ),
               Tab(
-                text: 'Aramalar',
+                text: TextHelper.tabBarView3,
               ),
             ]),
           ),
         ),
+
+        // Disable opening the end drawer with a swipe gesture.
+
         body: TabBarView(children: <Widget>[
           BodyChats(),
-          BodyChats(),
-          BodyChats(),
+          BodyStatus(),
+          BodyCall(),
         ]),
+        floatingActionButton: new FloatingActionButton(
+          onPressed: () {},
+          tooltip: 'Increment',
+          child: new Icon(Icons.add),
+        ),
       ),
     );
   }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-Widget BodyChatsMessageBox() => InkWell(
+Widget BodyStatusStatusBox() => InkWell(
       onTap: () {},
       child: SizedBox(
         height: 80.0,
@@ -41,15 +41,8 @@ Widget BodyChatsMessageBox() => InkWell(
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
-                              Icon(
-                                Icons.done_all,
-                                size: 20,
-                              ),
-                              SizedBox(
-                                width: 15,
-                              ),
                               Text(
-                                'Mesajjjjjj',
+                                'Bugün 21.24',
                               ),
                             ],
                           ),
@@ -58,7 +51,6 @@ Widget BodyChatsMessageBox() => InkWell(
                     ),
                   ),
                 ),
-                Expanded(flex: 2, child: Text('17.17'))
               ],
             ),
           ),
