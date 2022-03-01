@@ -1,12 +1,18 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
 
 import '../ui/helper/text_helper.dart';
 import '../ui/helper/color_helper.dart';
-import '../widgets/settings_box.dart';
+import '../widgets/widget_settings_box.dart';
 
-class BodySettings extends StatelessWidget {
+class BodySettings extends StatefulWidget {
   const BodySettings({Key? key}) : super(key: key);
 
+  @override
+  State<BodySettings> createState() => _BodySettingsState();
+}
+
+class _BodySettingsState extends State<BodySettings> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,7 +21,7 @@ class BodySettings extends StatelessWidget {
         title: Text(TextHelper.settingsHeaderText),
       ),
       body: Container(
-        color: ColorHelper.bodyBgColor,
+        color: Color.fromARGB(255, 7, 5, 5),
         child: Column(
           children: [
             InkWell(
@@ -82,11 +88,9 @@ class BodySettings extends StatelessWidget {
                 ),
               ),
             ),
-            //for (var i in TextHelper.settingsBoxInformations.keys)
-            //Text(i.toString()),
-            for (var keys in TextHelper.settingsBoxInformations.values)
-              for (var values in keys) Text(values),
-
+           
+            for (var element in TextHelper.settingsBoxInformationsList)
+              SettingsBoxCreate(element[0], element[1], element[2]),
             SizedBox(
               height: 30.0,
             ),

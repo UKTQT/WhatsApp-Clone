@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../widgets/body_status_statusbox.dart';
+import '../widgets/widget_status_statusbox.dart';
 import '../ui/helper/text_helper.dart';
 import '../ui/helper/color_helper.dart';
 

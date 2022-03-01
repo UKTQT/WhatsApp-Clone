@@ -42,9 +42,7 @@ class _HomePageState extends State<HomePage> {
             width: 50.0,
             height: 50.0,
             child: ElevatedButton(
-              onPressed: () {
-                Scaffold.of(context).openEndDrawer();
-              },
+              onPressed: () {},
               child: Icon(Icons.camera),
               style: ElevatedButton.styleFrom(
                 elevation: 0,

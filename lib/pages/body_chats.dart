@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../widgets/body_chats_messagebox.dart';
+import '../widgets/widget_chats_messagebox.dart';
 import 'body_archive.dart';
 import '../ui/helper/text_helper.dart';
 import '../ui/helper/color_helper.dart';
