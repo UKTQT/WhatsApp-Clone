@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsclone/ui/helper/icon_helper.dart';
 
 import '../widgets/widget_chats_messagebox.dart';
 import 'body_archive.dart';
@@ -26,12 +27,13 @@ class BodyChats extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Expanded(flex: 2, child: Icon(Icons.archive)),
+                      Expanded(
+                          flex: 2, child: IconHelper.bodyChatsArchiveBtnIcon),
                       SizedBox(
                         width: 10,
                       ),
                       Expanded(
-                          flex: 12,
+                          flex: 10,
                           child: Text(
                             TextHelper.archiveButtonText,
                             style: TextStyle(

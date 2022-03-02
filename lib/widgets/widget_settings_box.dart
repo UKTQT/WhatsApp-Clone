@@ -2,9 +2,13 @@ import 'package:flutter/material.dart';
 
 import '../ui/helper/text_helper.dart';
 
-Widget SettingsBoxCreate(Icon icon, String title, String description) =>
+Widget SettingsBoxCreate(Icon icon, String title, String description,
+        dynamic navigation, dynamic context) =>
     InkWell(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => navigation));
+      },
       child: SizedBox(
         height: 80.0,
         child: Card(

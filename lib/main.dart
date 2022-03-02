@@ -6,6 +6,7 @@ import 'pages/body_call.dart';
 import 'pages/body_settings.dart';
 import 'ui/helper/text_helper.dart';
 import 'ui/helper/color_helper.dart';
+import 'ui/helper/icon_helper.dart';
 
 void main() {
   runApp(MyHomePage());
@@ -37,13 +38,13 @@ class _HomePageState extends State<HomePage> {
       initialIndex: 0,
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Color(0xFF263238),
+          backgroundColor: ColorHelper.headerColor,
           leading: Container(
             width: 50.0,
             height: 50.0,
             child: ElevatedButton(
               onPressed: () {},
-              child: Icon(Icons.camera),
+              child: IconHelper.headerCameraIcon,
               style: ElevatedButton.styleFrom(
                 elevation: 0,
                 primary: Colors.transparent,
@@ -51,8 +52,8 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           title: Text(
-            'WhasApp Clone',
-            style: TextStyle(color: Color(0xFFb0bec5)),
+            TextHelper.headerTitle,
+            style: TextStyle(color: ColorHelper.headerTextColor),
           ),
           actions: [
             Row(
@@ -62,7 +63,7 @@ class _HomePageState extends State<HomePage> {
                   height: 50.0,
                   child: ElevatedButton(
                     onPressed: () {},
-                    child: Icon(Icons.search),
+                    child: IconHelper.headerSearchIcon,
                     style: ElevatedButton.styleFrom(
                       elevation: 0,
                       primary: Colors.transparent,
@@ -74,32 +75,13 @@ class _HomePageState extends State<HomePage> {
                     height: 50.0,
                     child: PopupMenuButton(
                         color: ColorHelper.headerPopupMenuBg,
-                        child: Icon(Icons.grain),
+                        child: IconHelper.headerPopupMenuIcon,
                         itemBuilder: (context) => [
-                              PopupMenuItem(
-                                onTap: () {},
-                                child: Text("Yeni Grup"),
-                                value: 1,
-                              ),
-                              PopupMenuItem(
-                                onTap: () {},
-                                child: Text("Yeni Toplu Mesaj"),
-                                value: 2,
-                              ),
-                              PopupMenuItem(
-                                onTap: () {},
-                                child: Text("Bağlı Cihazlar"),
-                                value: 3,
-                              ),
-                              PopupMenuItem(
-                                onTap: () {},
-                                child: Text("Yıldızlı Mesajlar"),
-                                value: 4,
-                              ),
-                              PopupMenuItem(
-                                child: Text("Ayarlar"),
-                                value: 5,
-                              ),
+                              //popup items create loop
+                              for (var element
+                                  in TextHelper.headerPopupMenuButtonGroup)
+                                PopupMenuItem(
+                                    child: Text(element[0]), value: element[1])
                             ],
                         onSelected: (choice) {
                           switch (choice) {
@@ -136,9 +118,6 @@ class _HomePageState extends State<HomePage> {
             ]),
           ),
         ),
-
-        // Disable opening the end drawer with a swipe gesture.
-
         body: TabBarView(children: <Widget>[
           BodyChats(),
           BodyStatus(),

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../widgets/widget_status_statusbox.dart';
 import '../ui/helper/text_helper.dart';
 import '../ui/helper/color_helper.dart';
+import '../ui/helper/icon_helper.dart';
 
 Widget BodyStatus() => Container(
       color: ColorHelper.bodyBgColor,
@@ -22,10 +23,7 @@ Widget BodyStatus() => Container(
                         child: Container(
                             width: 50,
                             height: 50,
-                            child: Icon(
-                              Icons.add_circle,
-                              size: 50,
-                            )),
+                            child: IconHelper.bodyStatusAddBtnIcon),
                       ),
                       Expanded(
                         flex: 10,

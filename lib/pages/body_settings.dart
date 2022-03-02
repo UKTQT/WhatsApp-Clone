@@ -1,9 +1,10 @@
-import 'dart:convert';
 import 'package:flutter/material.dart';
 
 import '../ui/helper/text_helper.dart';
 import '../ui/helper/color_helper.dart';
 import '../widgets/widget_settings_box.dart';
+import 'settings_profile.dart';
+import 'settings_account.dart';
 
 class BodySettings extends StatefulWidget {
   const BodySettings({Key? key}) : super(key: key);
@@ -21,11 +22,14 @@ class _BodySettingsState extends State<BodySettings> {
         title: Text(TextHelper.settingsHeaderText),
       ),
       body: Container(
-        color: Color.fromARGB(255, 7, 5, 5),
+        color: ColorHelper.bodyBgColor,
         child: Column(
           children: [
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => SettingsProfile()));
+              },
               child: SizedBox(
                 height: 90.0,
                 child: Card(
@@ -88,9 +92,9 @@ class _BodySettingsState extends State<BodySettings> {
                 ),
               ),
             ),
-           
             for (var element in TextHelper.settingsBoxInformationsList)
-              SettingsBoxCreate(element[0], element[1], element[2]),
+              SettingsBoxCreate(
+                  element[0], element[1], element[2], element[3], context),
             SizedBox(
               height: 30.0,
             ),
