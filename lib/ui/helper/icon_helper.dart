@@ -16,4 +16,5 @@ class IconHelper {
   );
   //Body Settins
   //** settings icons are on the text_helper.dart page
+
 }

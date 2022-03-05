@@ -46,9 +46,6 @@ class BodyChats extends StatelessWidget {
             ),
           ), // ARCHIVE-------------
           BodyChatsMessageBox(),
-          BodyChatsMessageBox(),
-          BodyChatsMessageBox(),
-          BodyChatsMessageBox(),
         ],
       ),
     );

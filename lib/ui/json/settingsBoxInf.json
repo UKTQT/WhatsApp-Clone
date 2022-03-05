@@ -1,0 +1,32 @@
+{
+    "1": {
+        "icon": "Icons.key.toString()",
+		"title": "Hesap",
+        "description": "Gizlilik, güvenlik, numara değişir",
+		"onPressed": ""
+    },
+    "2": {
+        "icon": "Icons.chat.toString()",
+		"title": "Sohbetler",
+        "description": "Tema, duvar kağıtları, sohbet geçmişi",
+		"onPressed": ""
+    },
+    "3": {
+        "icon": "Icons.notifications.toString()",
+		"title": "Bildirimler",
+        "description": "Mesaj, grup ve arama sesleri",
+		"onPressed": ""
+    },
+    "4": {
+        "icon": "Icons.storage.toString()",
+		"title": "Depolama ve veriler",
+        "description": "Ağ kullanımı, otomatik indirme",
+		"onPressed": ""
+    },
+    "5": {
+        "icon": "Icons.help.toString()",
+		"title": "Yardım",
+        "description": "Yardım merkezi, bize ulaşın, gizlilik ilkesi",
+		"onPressed": ""
+    }
+}
