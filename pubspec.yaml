@@ -34,7 +34,7 @@ dependencies:
   path: any
   gallery_saver: any
   http : ^0.13.4
-  
+
   json_annotation: ^4.4.0
 
   # The following adds the Cupertino Icons font to your application.

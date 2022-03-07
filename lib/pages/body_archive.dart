@@ -18,12 +18,12 @@ class BodyArchive extends StatelessWidget {
         color: ColorHelper.bodyBgColor,
         child: Column(
           children: [
-            BodyChatsMessageBox(),
-            BodyChatsMessageBox(),
-            BodyChatsMessageBox(),
-            BodyChatsMessageBox(),
-            BodyChatsMessageBox(),
-            BodyChatsMessageBox(),
+            BodyChatsMessageBox(context),
+            BodyChatsMessageBox(context),
+            BodyChatsMessageBox(context),
+            BodyChatsMessageBox(context),
+            BodyChatsMessageBox(context),
+            BodyChatsMessageBox(context),
           ],
         ),
       ),

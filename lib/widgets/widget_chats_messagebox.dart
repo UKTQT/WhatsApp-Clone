@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import '../pages/body_message_page.dart';
 
-Widget BodyChatsMessageBox() => InkWell(
-      onTap: () {},
+Widget BodyChatsMessageBox(context) => InkWell(
+      onTap: () {
+        Navigator.push(
+            context, MaterialPageRoute(builder: ((context) => MessagePage())));
+      },
       child: SizedBox(
         height: 80.0,
         child: Card(

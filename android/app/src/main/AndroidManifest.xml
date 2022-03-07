@@ -1,10 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.whatsclone">
-    
-
+    package="com.widgetsexample.widget">
    <application
-        android:requestLegacyExternalStorage="true"
-        android:label="whatsclone"
+        android:label="widget"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
