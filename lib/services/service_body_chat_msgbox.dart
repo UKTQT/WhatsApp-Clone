@@ -8,7 +8,7 @@ class MessageBoxService {
 
   addMessage(
       String user, String user_pp_100, String message, bool archive) async {
-    var ref = _firestore.collection('');
+    var ref = _firestore.collection('messageBox');
 
     //user_pp_100 = 'image';
 
@@ -25,5 +25,15 @@ class MessageBoxService {
         user_pp_100: user_pp_100,
         message: message,
         archive: archive);
+  }
+
+  Stream<QuerySnapshot>? getMessage() {
+    var ref = _firestore.collection('messageBox').snapshots();
+    return ref;
+  }
+
+  Future<void>? removeMessage(String docId) {
+    var ref = _firestore.collection('messageBox').doc(docId).delete();
+    return ref;
   }
 }

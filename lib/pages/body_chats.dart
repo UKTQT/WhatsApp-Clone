@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 import 'body_archive.dart';
@@ -40,46 +41,52 @@ class _BodyChatsState extends State<BodyChats> {
       ),
       body: Container(
         color: ColorHelper.bodyBgColor,
-        child: Column(
-          children: [
-            InkWell(
-              onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => BodyArchive()));
-              },
-              child: SizedBox(
-                height: 50.0,
-                child: Card(
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Row(
-                      children: [
-                        Expanded(
-                            flex: 2, child: IconHelper.bodyChatsArchiveBtnIcon),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Expanded(
-                            flex: 10,
-                            child: Text(
-                              TextHelper.archiveButtonText,
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 17),
-                            )),
-                      ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              InkWell(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => BodyArchive()));
+                },
+                child: SizedBox(
+                  height: 50.0,
+                  child: Card(
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        children: [
+                          Expanded(
+                              flex: 2,
+                              child: IconHelper.bodyChatsArchiveBtnIcon),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Expanded(
+                              flex: 10,
+                              child: Text(
+                                TextHelper.archiveButtonText,
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 17),
+                              )),
+                        ],
+                      ),
                     ),
                   ),
                 ),
               ),
-            ), // ARCHIVE-------------
-            BodyChatsMessageBox(context),
-            ElevatedButton(
-                onPressed: () {
-                  _messageBoxService.addMessage(
-                      'Ukt Küçüktopçu', 'imagedeneme', 'dnm mesaj', true);
-                },
-                child: Text('ekle')),
-          ],
+              BodyChatsMessageBox(),
+
+              //BodyChatsMessageBox(context),
+              //BodyChatsMessageBox(),
+              /*ElevatedButton(
+                  onPressed: () {
+                    _messageBoxService.addMessage(
+                        'Ukt Küçüktopçu', 'imagedeneme', 'dnm mesaj', true);
+                  },
+                  child: Text('ekle')),*/
+            ],
+          ),
         ),
       ),
     );
