@@ -9,7 +9,7 @@ Proje, tecrübe kazanmak için yaptığım, ilk dart / flutter projemdir. Projed
 ## Project Screenshots
 <table border='1'>
   <tr>
-    <td>![1](https://user-images.githubusercontent.com/17275354/157509286-a7e69a54-234b-4d5a-9cfb-d25d6328574f.jpg)</td>
+    <td>(https://user-images.githubusercontent.com/17275354/157509286-a7e69a54-234b-4d5a-9cfb-d25d6328574f.jpg)</td>
     <td>![2](https://user-images.githubusercontent.com/17275354/157509307-c412484a-ade9-42f6-abd9-5c8474a24a83.jpg)</td>
   </tr>
   <tr>
