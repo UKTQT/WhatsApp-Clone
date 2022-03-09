@@ -11,7 +11,7 @@ Proje, tecrübe kazanmak için yaptığım, ilk dart / flutter projemdir. Projed
 <table>
   <tr>
     <td><img src="https://user-images.githubusercontent.com/17275354/157511136-febe785a-2c8a-4773-ace1-cce17aa89dbc.jpg" width="350" title="hover text"></td>
-    <td><img src="https://user-images.githubusercontent.com/17275354/157511136-febe785a-2c8a-4773-ace1-cce17aa89dbc.jpg" width="350" title="hover text"></td>
+    <td><img src="![2](https://user-images.githubusercontent.com/17275354/157511761-27d3e7c1-f8ba-4036-bf2c-e64adc171334.jpg)" width="350" title="hover text"></td>
     <td><img src="https://user-images.githubusercontent.com/17275354/157511136-febe785a-2c8a-4773-ace1-cce17aa89dbc.jpg" width="350" title="hover text"></td>
     <td><img src="https://user-images.githubusercontent.com/17275354/157511136-febe785a-2c8a-4773-ace1-cce17aa89dbc.jpg" width="350" title="hover text"></td>
   </tr>
