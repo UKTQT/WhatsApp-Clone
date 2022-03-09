@@ -12,10 +12,10 @@ The project is my first dart / flutter project that I did to gain experience. Fi
 
 ## Project Feature
 #### Firebase Firestore ✓
-### Firebase Authentication ✓
-### Responsive Screen ✖
-### Clean Code ✓
-### WhatsApp Camera ✖
+#### Firebase Authentication ✓
+#### Responsive Screen ✖
+#### Clean Code ✓
+#### WhatsApp Camera ✖
 
 </br>
 
