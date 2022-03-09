@@ -21,10 +21,14 @@ class TextHelper {
     ["Bağlı Cihazlar", 3],
     ["Yıldızlı Mesajlar", 4],
     ["Ayarlar", 5],
+    ["Çıkış Yap", 6],
   ];
   //Body Chats Archive
   static final String archiveButtonText = 'Arşiv';
   static final String archivePageHeaderTitle = 'Arşivlenmiş Mesajlar';
+  //Body Chats Message Create
+  static final String msgCreateTitle = 'Kişi Seç';
+  static final String msgCreateCancelBtnText = 'İptal';
   //Body Status Add Button
   static final String statusAddButtonTitle = 'Durumum';
   static final String statusAddButtonDescription =

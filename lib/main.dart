@@ -2,6 +2,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
+import 'pages/body_login.dart';
+import 'pages/body_welcome.dart';
 import 'pages/body_chats.dart';
 import 'pages/body_status.dart';
 import 'pages/body_call.dart';
@@ -9,6 +11,7 @@ import 'pages/body_settings.dart';
 import 'ui/helper/text_helper.dart';
 import 'ui/helper/color_helper.dart';
 import 'ui/helper/icon_helper.dart';
+import 'services/service_auth.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -34,6 +37,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  ServiceAuth _serviceAuth = ServiceAuth();
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -65,7 +69,12 @@ class _HomePageState extends State<HomePage> {
                   width: 50.0,
                   height: 50.0,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => BodyWelcome()));
+                    },
                     child: IconHelper.headerSearchIcon,
                     style: ElevatedButton.styleFrom(
                       elevation: 0,
@@ -101,6 +110,15 @@ class _HomePageState extends State<HomePage> {
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) => BodySettings()));
+                              break;
+                            case 6:
+                              _serviceAuth.signOut().then((value) {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => BodyWelcome()));
+                              });
+                              break;
                           }
                         })),
               ],

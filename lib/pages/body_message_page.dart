@@ -3,13 +3,16 @@ import 'package:flutter/material.dart';
 import '../ui/helper/color_helper.dart';
 
 class MessagePage extends StatefulWidget {
-  const MessagePage({Key? key}) : super(key: key);
+  String? userName;
+  MessagePage({Key? key, this.userName}) : super(key: key);
 
   @override
-  State<MessagePage> createState() => _MessagePageState();
+  State<MessagePage> createState() => _MessagePageState(userName: userName);
 }
 
 class _MessagePageState extends State<MessagePage> {
+  String? userName;
+  _MessagePageState({this.userName});
   @override
   Widget build(BuildContext context) {
     double _statusBarHeight = MediaQuery.of(context).padding.top;
@@ -21,7 +24,7 @@ class _MessagePageState extends State<MessagePage> {
       appBar: AppBar(
         backgroundColor: ColorHelper.headerColor,
         title: Row(
-          children: [Text('Ufuk Küçüktopçu')],
+          children: [Text(userName!)],
         ),
         actions: [
           Row(

@@ -35,8 +35,12 @@ class _BodyChatsMessageBoxState extends State<BodyChatsMessageBox> {
                 document.data()! as Map<String, dynamic>;
             return InkWell(
               onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: ((context) => MessagePage())));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: ((context) => MessagePage(
+                              userName: data['user'],
+                            ))));
               },
               child: SizedBox(
                 height: 80.0,
@@ -95,7 +99,7 @@ class _BodyChatsMessageBoxState extends State<BodyChatsMessageBox> {
                                       Expanded(
                                         flex: 11,
                                         child: Text(
-                                          'MesajjjjjjMesajjjjjjMesajjjjjjMesajjjjjjMesajjjjjj',
+                                          data['message'],
                                           overflow: TextOverflow.ellipsis,
                                         ),
                                       ),

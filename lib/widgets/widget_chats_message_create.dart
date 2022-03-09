@@ -1,12 +1,13 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
+
+import '../ui/helper/text_helper.dart';
+import '../ui/helper/color_helper.dart';
 
 Widget BodyChatsMessageCreate() => Container(
       decoration: BoxDecoration(
-        color: Color(0xffcfd8dc),
+        color: ColorHelper.bodyChatsMessageCreateBg,
         border: Border.all(
-          color: Color(0xffcfd8dc),
+          color: ColorHelper.bodyChatsMessageCreateBg,
           width: 0.1,
         ),
         borderRadius: BorderRadius.only(
@@ -22,9 +23,9 @@ Widget BodyChatsMessageCreate() => Container(
               child: Row(
                 children: [
                   Text(
-                    'Kişi Seç',
+                    TextHelper.msgCreateTitle,
                     style: TextStyle(
-                      color: Color(0xff263238),
+                      color: ColorHelper.bodyChatsMessageCreateTitle,
                       fontSize: 22.0,
                       fontWeight: FontWeight.w700,
                     ),
@@ -33,7 +34,7 @@ Widget BodyChatsMessageCreate() => Container(
                   Text(
                     '(6 Kişi)',
                     style: TextStyle(
-                        color: Color(0xff263238),
+                        color: ColorHelper.bodyChatsMessageCreateTitle,
                         fontSize: 16.0,
                         fontWeight: FontWeight.bold),
                   ),
@@ -48,7 +49,7 @@ Widget BodyChatsMessageCreate() => Container(
                     InkWell(
                       onTap: () {},
                       child: Card(
-                          color: Color(0xff212121),
+                          color: ColorHelper.bodyChatsMessageCreateTitle,
                           child: Row(
                             children: [
                               Expanded(
@@ -80,10 +81,10 @@ Widget BodyChatsMessageCreate() => Container(
                 children: [
                   ElevatedButton(
                       onPressed: () {},
-                      child: Text('İptal'),
+                      child: Text(TextHelper.msgCreateCancelBtnText),
                       style: ButtonStyle(
-                          backgroundColor:
-                              MaterialStateProperty.all(Color(0xFF263238))))
+                          backgroundColor: MaterialStateProperty.all(
+                              ColorHelper.bodyChatsMessageCreateCancelBtn)))
                 ],
               ),
             )
