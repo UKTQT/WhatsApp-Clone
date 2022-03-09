@@ -8,13 +8,14 @@ The project is my first dart / flutter project that I did to gain experience. Fi
 Proje, tecrübe kazanmak için yaptığım, ilk dart / flutter projemdir. Projede Firebase Authentication ve Firestore Db kullanılmıştır. Projede #TemizKod yasasına uygun hareket ettim. Tüm ana gövdeler, renkler, yazılar, servisler, modeller, widgetlar, resimler, düzen içerisinde oluşturulmuş ve kullanılmıştır. Projeyi, ileriki zamanlarda tekrar dönmek üzere bu halinde bırakıyorum. 
 ## Project Screenshots
 https://user-images.githubusercontent.com/17275354/157509286-a7e69a54-234b-4d5a-9cfb-d25d6328574f.jpg
+![a5145b5e-4d8e-4ebb-8b83-2a585f9ebcd3](https://user-images.githubusercontent.com/17275354/157509430-011d9847-cd31-44d0-a9f4-9cc6591d1ff0.jpg)
 <table border='1'>
   <tr>
     <td></td>
     <td>![2](https://user-images.githubusercontent.com/17275354/157509307-c412484a-ade9-42f6-abd9-5c8474a24a83.jpg)</td>
   </tr>
   <tr>
-    <td>![a5145b5e-4d8e-4ebb-8b83-2a585f9ebcd3](https://user-images.githubusercontent.com/17275354/157509430-011d9847-cd31-44d0-a9f4-9cc6591d1ff0.jpg)</td>
+    <td></td>
     <td>![8975d109-ec2a-4f16-be22-e51ccbbb495f](https://user-images.githubusercontent.com/17275354/157509473-77f1997a-ade7-4c71-b9e7-0b04c508d366.jpg)</td>
     <td>![1741b38c-e6e4-472c-8dda-00ba2d3ee25a](https://user-images.githubusercontent.com/17275354/157509518-3303d4ae-56eb-4fc4-9935-494c5903419b.jpg)</td>
   </tr>
