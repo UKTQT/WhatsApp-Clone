@@ -7,9 +7,10 @@ The project is my first dart / flutter project that I did to gain experience. Fi
 ### Tr
 Proje, tecrübe kazanmak için yaptığım, ilk dart / flutter projemdir. Projede Firebase Authentication ve Firestore Db kullanılmıştır. Projede #TemizKod yasasına uygun hareket ettim. Tüm ana gövdeler, renkler, yazılar, servisler, modeller, widgetlar, resimler, düzen içerisinde oluşturulmuş ve kullanılmıştır. Projeyi, ileriki zamanlarda tekrar dönmek üzere bu halinde bırakıyorum. 
 ## Project Screenshots
+https://user-images.githubusercontent.com/17275354/157509286-a7e69a54-234b-4d5a-9cfb-d25d6328574f.jpg
 <table border='1'>
   <tr>
-    <td>https://user-images.githubusercontent.com/17275354/157509286-a7e69a54-234b-4d5a-9cfb-d25d6328574f.jpg</td>
+    <td></td>
     <td>![2](https://user-images.githubusercontent.com/17275354/157509307-c412484a-ade9-42f6-abd9-5c8474a24a83.jpg)</td>
   </tr>
   <tr>
