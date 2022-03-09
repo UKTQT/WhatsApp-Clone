@@ -7,13 +7,13 @@ Proje, tecrübe kazanmak için yaptığım, ilk dart / flutter projemdir. Projed
 </br>
 ### En
 The project is my first dart / flutter project that I did to gain experience. Firebase Authentication and Firestore Db are used in the project. I acted in accordance with the #CleanKod law in the project. All main bodies, colors, texts, services, models, widgets, images are created and used in the layout. I leave the project as it is, to return to it at a later time.
-
-## Project Screenshots
+</br>
+## Project Feature
 ### Firebase Firestore ✓
 ### Firebase Authentication ✓
 ### Responsive Screen ✖
 ### Clean Code ✓
-
+</br>
 ## Project Screenshots
 
 <table>
